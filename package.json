@@ -21,7 +21,7 @@
     "react-dom": "~16.1.1"
   },
   "devDependencies": {
-    "cefc-tools": "^0.0.13"
+    "cefc-tools": "^0.0.14"
   },
   "theme": "node_modules/cefc-ui-style/src/themes/default.less"
 }

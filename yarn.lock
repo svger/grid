@@ -1495,9 +1495,9 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.npmjs.org/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-cefc-tools@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.npmjs.org/cefc-tools/-/cefc-tools-0.0.13.tgz#afd1c47b5d2c69204ece7a04514989e87cd6493f"
+cefc-tools@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.npmjs.org/cefc-tools/-/cefc-tools-0.0.14.tgz#e5d91a77a40fb1e9d8f8048163ae1de734927076"
   dependencies:
     autoprefixer "^7.1.5"
     babel-cli "~6.26.0"

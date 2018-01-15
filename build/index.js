@@ -1,12 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cns from 'classnames';
+'use strict';
 
-import './style/index.css';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Grid;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+require('./style/index.css');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var defaultPrefixCls = 'cefc-grid';
 
-export default function Grid(_ref) {
+function Grid(_ref) {
   var prefixCls = _ref.prefixCls,
       className = _ref.className,
       space = _ref.space,
@@ -28,7 +45,7 @@ export default function Grid(_ref) {
     var n = index + 1;
     var last = n % cols === 0;
 
-    tmp.push(React.createElement(
+    tmp.push(_react2.default.createElement(
       'div',
       {
         className: prefixCls + '-item',
@@ -50,7 +67,7 @@ export default function Grid(_ref) {
   var rows = ret.map(function (row, index) {
     var last = index + 1 === rowCount;
 
-    return React.createElement(
+    return _react2.default.createElement(
       'div',
       {
         key: index,
@@ -63,9 +80,9 @@ export default function Grid(_ref) {
     );
   });
 
-  return React.createElement(
+  return _react2.default.createElement(
     'div',
-    { className: cns(prefixCls, className) },
+    { className: (0, _classnames2.default)(prefixCls, className) },
     rows
   );
 }
@@ -74,7 +91,7 @@ Grid.defaultProps = {
   prefixCls: defaultPrefixCls,
   cols: 4,
   renderItem: function renderItem(item) {
-    return React.createElement(
+    return _react2.default.createElement(
       'div',
       { className: defaultPrefixCls + '-item', key: item.id },
       item.id
@@ -86,13 +103,13 @@ Grid.defaultProps = {
   onClick: function onClick() {}
 };
 Grid.propTypes = {
-  prefixCls: PropTypes.string,
-  cols: PropTypes.number,
-  data: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  prefixCls: _propTypes2.default.string,
+  cols: _propTypes2.default.number,
+  data: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+    id: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]).isRequired
   })).isRequired,
-  space: PropTypes.string,
-  renderItem: PropTypes.func,
-  className: PropTypes.string,
-  onClick: PropTypes.func
+  space: _propTypes2.default.string,
+  renderItem: _propTypes2.default.func,
+  className: _propTypes2.default.string,
+  onClick: _propTypes2.default.func
 };
