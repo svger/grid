@@ -1,0 +1,25 @@
+@import '../../node_modules/cefc-ui-style/src/mixins/utils.less';
+@import '../../@{theme}';
+
+@prefixCls: cefc-grid;
+
+.@{prefixCls} {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  &-item {
+    flex: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
