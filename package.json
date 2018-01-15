@@ -1,6 +1,6 @@
 {
   "name": "cefc-grid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CEFC-UI Component",
   "main": "build/index.js",
   "module": "./src/index.js",
@@ -24,5 +24,5 @@
   "devDependencies": {
     "cefc-tools": "^0.0.5"
   },
-  "theme": "../Style/src/themes/default.less"
+  "theme": "node_modules/cefc-ui-style/src/themes/default.less"
 }
