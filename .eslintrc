@@ -27,6 +27,7 @@
     "no-unused-expressions": 0,
     "import/no-unresolved": 0,
     "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
     //The body of a for-in should be wrapped in an if statement to filter unwanted properties from the prototype
     "guard-for-in": 0,
     //Using 'ForInStatement' is not allowed
