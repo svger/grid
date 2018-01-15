@@ -1,29 +1,12 @@
-'use strict';
+import React from 'react';
+import PropTypes from 'prop-types';
+import cns from 'classnames';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Grid;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-require('./style/index.less');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import './style/index.css';
 
 var defaultPrefixCls = 'cefc-grid';
 
-function Grid(_ref) {
+export default function Grid(_ref) {
   var prefixCls = _ref.prefixCls,
       className = _ref.className,
       space = _ref.space,
@@ -45,7 +28,7 @@ function Grid(_ref) {
     var n = index + 1;
     var last = n % cols === 0;
 
-    tmp.push(_react2.default.createElement(
+    tmp.push(React.createElement(
       'div',
       {
         className: prefixCls + '-item',
@@ -67,7 +50,7 @@ function Grid(_ref) {
   var rows = ret.map(function (row, index) {
     var last = index + 1 === rowCount;
 
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       {
         key: index,
@@ -80,9 +63,9 @@ function Grid(_ref) {
     );
   });
 
-  return _react2.default.createElement(
+  return React.createElement(
     'div',
-    { className: (0, _classnames2.default)(prefixCls, className) },
+    { className: cns(prefixCls, className) },
     rows
   );
 }
@@ -91,7 +74,7 @@ Grid.defaultProps = {
   prefixCls: defaultPrefixCls,
   cols: 4,
   renderItem: function renderItem(item) {
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       { className: defaultPrefixCls + '-item', key: item.id },
       item.id
@@ -103,13 +86,13 @@ Grid.defaultProps = {
   onClick: function onClick() {}
 };
 Grid.propTypes = {
-  prefixCls: _propTypes2.default.string,
-  cols: _propTypes2.default.number,
-  data: _propTypes2.default.arrayOf(_propTypes2.default.shape({
-    id: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]).isRequired
+  prefixCls: PropTypes.string,
+  cols: PropTypes.number,
+  data: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
   })).isRequired,
-  space: _propTypes2.default.string,
-  renderItem: _propTypes2.default.func,
-  className: _propTypes2.default.string,
-  onClick: _propTypes2.default.func
+  space: PropTypes.string,
+  renderItem: PropTypes.func,
+  className: PropTypes.string,
+  onClick: PropTypes.func
 };
