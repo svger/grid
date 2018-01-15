@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '../src';
+import './comp.less'
 
 class App extends React.Component {
   state = {
@@ -49,10 +50,6 @@ class App extends React.Component {
   handleGridItemClick = (item) => {
     console.log(item);
   }
-
-  // renderItem = (item) => {
-  //   return <GridItem {...item} />;
-  // }
 
   render() {
     const { gridData } = this.state;

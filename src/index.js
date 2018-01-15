@@ -66,7 +66,7 @@ Grid.defaultProps = {
   prefixCls: defaultPrefixCls,
   cols: 4,
   renderItem(item) {
-    return <div className={`${prefixCls}-item`} key={item.id}>{item.id}</div>;
+    return <div className={`${defaultPrefixCls}-item`} key={item.id}>{item.id}</div>;
   },
   className: '',
   space: '0',
